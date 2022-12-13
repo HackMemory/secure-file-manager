@@ -34,12 +34,8 @@ class _MainScreenState extends State<MainScreen> {
           type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Feather.folder),
-              label: 'Browse',
-            ),
-            BottomNavigationBarItem(
               icon: Icon(Feather.share_2),
-              label: 'FTP',
+              label: 'Main',
             ),
             BottomNavigationBarItem(
               icon: Icon(Feather.settings),

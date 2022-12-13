@@ -25,21 +25,21 @@ class _SplashState extends State<Splash> {
   }
 
   changeScreen() async {
-    // PermissionStatus status = await Permission.storage.status;
-    // if (!status.isGranted) {
-    //   requestPermission();
-    // } else {
-    //   Navigate.pushPageReplacement(context, MainScreen());
-    // }
+    PermissionStatus status = await Permission.storage.status;
+    if (!status.isGranted) {
+      requestPermission();
+    } else {
+      Navigate.pushPageReplacement(context, const MainScreen());
+    }
   }
 
   requestPermission() async {
-    // PermissionStatus status = await Permission.storage.request();
-    // if (status.isGranted) {
-    //   Navigate.pushPageReplacement(context, MainScreen());
-    // } else {
-    //   Dialogs.showToast('Please Grant Storage Permissions');
-    // }
+    PermissionStatus status = await Permission.storage.request();
+    if (status.isGranted) {
+      Navigate.pushPageReplacement(context, const MainScreen());
+    } else {
+      Dialogs.showToast('Please Grant Storage Permissions');
+    }
   }
 
   @override
