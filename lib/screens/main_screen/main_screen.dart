@@ -1,4 +1,6 @@
 import 'package:sfm/utils/utils.dart';
+import 'package:sfm/screens/ftp.dart';
+import 'package:sfm/screens/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
@@ -24,7 +26,10 @@ class _MainScreenState extends State<MainScreen> {
           physics: const NeverScrollableScrollPhysics(),
           controller: _pageController,
           onPageChanged: onPageChanged,
-          children: const <Widget>[],
+          children: const <Widget>[
+            FTPScreen(),
+            SettingsScreen(),
+          ],
         ),
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Theme.of(context).primaryColor,
@@ -35,7 +40,7 @@ class _MainScreenState extends State<MainScreen> {
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Feather.share_2),
-              label: 'Main',
+              label: 'FTP',
             ),
             BottomNavigationBarItem(
               icon: Icon(Feather.settings),
